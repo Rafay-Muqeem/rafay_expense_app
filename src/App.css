@@ -1,38 +1,67 @@
-.App {
+*{
+  margin: 5px;
+}
+
+.header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  margin: 20px auto;
+  max-width: 400px;
+  max-height: 500px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.balance{
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance h2 {
+  font-size: 15px;
+}
+
+.balance h3 {
+  font-size: 25px;
+}
+
+.incomeexpense{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px black;
+}
+.incomeexpense h2 {
+  font-size: 20px;
+}
+.transactionlist {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.transactionlist ul {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transactionlist li{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px black;
+}
+
+.transactionlist h2{
+  font-size: 20px;
+  text-align: center;
+}
+
+.addtransaction input{
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 2px black;  
+}
+
+.addtransaction label{
+  font-weight: 500;
+  display: inline-block;
 }

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import  AddTransaction  from './addTransaction';
 import './App.css';
+import { Balance } from './Balance';
+import  TransactionList  from './transactionList';
+import {Provider} from './transContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider>
+      <h1 className="header">Expence Tracker</h1>
+      <div className="container">
+        <Balance />
+        <TransactionList />
+        <AddTransaction />
+      </div>
+    </Provider>
   );
 }
 
