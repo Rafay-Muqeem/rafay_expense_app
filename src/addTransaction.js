@@ -3,10 +3,10 @@ import { transContext } from "./transContext"
 
 const AddTransaction = () => {
     let [newName, setName] = useState("");
-    let [newAmount, setAmount] = useState(0);
+    let [newAmount, setAmount] = useState("");
     let {add_Transaction} = useContext(transContext);
     let id = Math. floor(Math. random() * 100);
-    // console.log(new Date().getTime());
+
     const HandleAddition = (event) => {
        
         event.preventDefault();
@@ -22,23 +22,30 @@ const AddTransaction = () => {
         });
 
         setName('');
-        setAmount(0);
+        setAmount('');
     }
 
     return(
-        <form className="addtransaction" onSubmit = { HandleAddition }>
-            <label>
-                Enter Name <br />
-                <input type="text" value={newName} placeholder="Name" onChange={(e) => setName(e.target.value)} required/>
-            </label>
-            <br />
-            <label>
-                Enter Amount <br />
-                <input type="number" value={newAmount} placeholder="Amount" onChange={(e) => setAmount(e.target.value)} required/>
-            </label>
-            <br />
-            <input type="submit" value="Add Transaction" />
-        </form>
+        <div>
+            <div>
+                <br />
+                <h3>Note!: Put "-" sign before your Expenses</h3>
+                <hr />
+            </div>
+            <form className="addtransaction" onSubmit = { HandleAddition }>
+                <label>
+                    Enter Name <br />
+                    <input type="text" value={newName} placeholder="Name" onChange={(e) => setName(e.target.value)} required/>
+                </label>
+                <br />
+                <label>
+                    Enter Amount <br />
+                    <input type="number" value={newAmount} placeholder="Amount" onChange={(e) => setAmount(e.target.value)} required/>
+                </label>
+                <br />
+                <input type="submit" value="Add Transaction" />
+            </form>
+        </div>
     )
 }
 
