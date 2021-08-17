@@ -13,7 +13,7 @@ export const transContext = createContext(initialState);
 
 export const Provider = ({children}) => {
     let [state, dispatch] = useReducer(transReducer, initialState);
-
+    
     function add_Transaction(transObj){
         dispatch({
             type: 'ADD_TRANSACTION',
@@ -40,5 +40,5 @@ export const Provider = ({children}) => {
         }}>
             {children}
         </transContext.Provider>
-    )
+    );
 }
